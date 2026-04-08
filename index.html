@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List With Extra Functions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="video-background">
+      <video autoplay muted loop playsinline>
+        <source
+          src="https://cdn.pixabay.com/video/2023/09/20/181011-865462604_large.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <div class="video-overlay"></div>
+    </div>
+
+    <div class="container">
+      <div class="todo-header">
+        <i class="fas fa-check-circle header-icon"></i>
+        <h2>My Todo List</h2>
+        <p class="subtitle">Organize your day efficiently</p>
+      </div>
+
+      <form onsubmit="add_todo(event)">
+        <div class="input-group">
+          <i class="fas fa-plus-circle input-icon"></i>
+          <input
+            type="text"
+            required
+            placeholder="Add a new task..."
+            class="userinput"
+          />
+          <button type="submit" class="add-btn">
+            <i class="fas fa-paper-plane"></i>
+            <span>Add</span>
+          </button>
+        </div>
+
+        <div class="output"></div>
+      </form>
+
+      <div class="footer-stats">
+        <p><i class="fas fa-tasks"></i> Stay productive!</p>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
